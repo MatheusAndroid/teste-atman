@@ -3,24 +3,23 @@
         <span>Controladores</span>
         <span>Ver Tudo</span>
     </div>
-    <ng-template *ngIf="controllers">
-    <div *ngFor="let controller of controllers; index as i; first as isFirst">
-        <div class="icon-vertical">
-            <i>icon</i>
-        </div>
-        <div>
-            <h3>{{controller.name}}</h3>
-            <h4>{{controller.id}}</h4>
-            <div>
-                <div class="card-key">Lat.</div>
-                <div class="card-value">{{controller.latitude}}</div>
-                <div class="card-key">Long.</div>
-                <div class="card-value">{{controller.longitude}}</div>
-                <div class="card-key">Descrição</div>
-                <div class="card-value">{{controller.description}}</div>
+   
+        <div *ngFor="let controller of controllers">
+            <div class="icon-vertical">
+                <i>icon</i>
             </div>
-        </div>
+            <div>
+                <h3>{{ controller.name }}</h3>
+                <h4>{{ controller.id }}</h4>
+                <div>
+                    <div class="card-key">Lat.</div>
+                    <div class="card-value">{{ controller.latitude }}</div>
+                    <div class="card-key">Long.</div>
+                    <div class="card-value">{{ controller.longitude }}</div>
+                    <div class="card-key">Descrição</div>
+                    <div class="card-value">{{ controller.description }}</div>
+                </div>
+            </div>
 
-    </div>
-</ng-template>
+        </div>
 </div>

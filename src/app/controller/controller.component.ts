@@ -10,21 +10,22 @@ import { NextObserver, Observable } from 'rxjs';
 })
 export class ControllerComponent implements OnInit {
 
+  //controller = {} as Controller
+  public controllers: Controller[]
+ 
+
   constructor(private apiService: ApiService) {
+    this.controllers = []
     
   }
-  controller = {} as Controller
-  controllers: Array<Controller> = []; 
 
   ngOnInit(): void {
     this.getControllers()
-    console.log("busquei controllers", this.controllers)
   }
   getControllers(){
-    this.apiService.getControllers().subscribe(data => {
-      this.controllers = data  
-      console.log(this.controllers)
-
+    this.apiService.getControllers().subscribe((data : Controller[]) => {
+      console.log(typeof data, data)
+      this.controllers = data
     })
   
 }}

@@ -3,5 +3,5 @@ export interface Controller {
     name: string,
     latitude: string;
     longitude: string;
-    description: number;
+    description: string;
 }

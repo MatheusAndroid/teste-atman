@@ -1,0 +1,25 @@
+<div>
+    <div>
+        <span>Ocorrências</span>
+        <span>Ver Tudo</span>
+    </div>
+   
+        <div *ngFor="let incident of incidents">
+            <div class="icon-vertical">
+                <i>icon</i>
+            </div>
+            <div>
+                <h3>{{ incident.category }}</h3>
+                <h4>{{ incident.id }}</h4>
+                <div>
+                    <div class="card-key">Lat.</div>
+                    <div class="card-value">{{ incident.latitude }}</div>
+                    <div class="card-key">Long.</div>
+                    <div class="card-value">{{ incident.longitude }}</div>
+                    <div class="card-key">Mensagem</div>
+                    <div class="card-value">{{ incident.message }}</div>
+                </div>
+            </div>
+
+        </div>
+</div>
