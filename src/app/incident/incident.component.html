@@ -1,25 +1,38 @@
-<div>
-    <div>
-        <span>Ocorrências</span>
-        <span>Ver Tudo</span>
+<div id="incidents">
+    <div class="pre-list-card">
+        <span><strong>Ocorrências</strong></span>
+        <span class="see-all">Ver Tudo</span>
     </div>
-   
-        <div *ngFor="let incident of incidents">
+    <div class="list-card">
+        <div class="card" *ngFor="let incident of incidents">
             <div class="icon-vertical">
-                <i>icon</i>
-            </div>
-            <div>
-                <h3>{{ incident.category }}</h3>
-                <h4>{{ incident.id }}</h4>
-                <div>
-                    <div class="card-key">Lat.</div>
-                    <div class="card-value">{{ incident.latitude }}</div>
-                    <div class="card-key">Long.</div>
-                    <div class="card-value">{{ incident.longitude }}</div>
-                    <div class="card-key">Mensagem</div>
-                    <div class="card-value">{{ incident.message }}</div>
+                <div class="icon-holder">
+                    <mat-icon>warning</mat-icon>
+                </div>
+                <br>
+                <div class="date">
+                    {{incident.createdAt | date: 'HH:mm dd/MM/YYYY'}}
                 </div>
             </div>
+            <div class="card-infos">
+                <span><strong *ngIf="incident.controllerName">{{incident.controllerName}}</strong></span>
+                <span><b>Id: </b>{{ incident.id }}</span>
+                <div class="card-block">
+                    <div >
+                        <div class="card-key">Lat.</div>
+                        <div class="card-value">{{ incident.latitude }}</div>
+                    </div >
+                    <div>
+                        <div class="card-key">Long.</div>
+                        <div class="card-value">{{ incident.longitude }}</div>
+                    </div>
+                    <div >
+                        <div class="card-key">Mensagem</div>
+                        <div class="card-value">{{ incident.message }}</div>
+                    </div>
 
+                </div>
+            </div>
         </div>
+    </div>
 </div>

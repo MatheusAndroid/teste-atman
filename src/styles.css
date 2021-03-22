@@ -1,4 +1,104 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --yellow: #ff9f1c;
+    --yellow-shadow: #ff9f1c33;
+    --weak-black: #23231a;
+    --gray:  #e7e7e7;
+    --blue: #2b9eb3
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--gray);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--yellow);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    
+    background: var(--yellow-shadow);
+  }
+html, body { height: 100%; margin: 0}
+body { background-color: #f2f2f2; font-family: Roboto, "Helvetica Neue", sans-serif; }
+#incidents, #controllers{
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #fafafa;
+    width: clamp(300px, 33%, 450px);
+    display: flex;
+    flex-direction: column;   
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.list-card{
+    height:clamp(250px, 25vh, 300px);
+    overflow-y: scroll;
+    padding: 10px;
+}
+.pre-list-card{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+.pre-list-card strong{
+    font-size: 22px;
+}
+.see-all{
+    color: var(--blue);
+}
+.see-all:hover{
+    text-decoration: underline;
+}
+.icon-vertical{
+    width: 20%;
+}
+
+.card{
+    display: flex;
+    border: 2px solid;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.card-infos{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 0 10px;
+}
+.icon-holder{
+    width:50px;
+    height: 50px;
+    background-color:var(--yellow);
+    border-radius: 50%;
+    padding: 5px;
+}
+.icon-vertical .mat-icon{
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+    height: fit-content;
+    color: white;
+}
+.card-block{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-block > div {
+    width: 50%
+}
+.card-block > div:last-of-type{
+    width: 100%;
+}
+.card-key{
+    color: #000;
+    font-weight:500;
+}
+.card-value{
+    color: var(--weak-black);
+    font-weight: light;
+}
+.date{
+color: var(--weak-black)
+}

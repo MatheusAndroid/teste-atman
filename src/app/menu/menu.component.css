@@ -1,0 +1,30 @@
+.flex{
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+header{
+    height: 55px;
+    max-width: 100vw;
+    padding: 0px 20px;
+    border-bottom: 1px solid #ddd ;
+    background-color: #fff;
+}
+.flex > div,nav{
+    width: 49.9%;
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+}
+nav{
+    justify-content: flex-end;
+}
+.user-items{
+    align-items: center;
+}
+.user-sub{
+    font-weight: 100;
+}
+.mat-icon{
+    color: var(--weak-black)
+}

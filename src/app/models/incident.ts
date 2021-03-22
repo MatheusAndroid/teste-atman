@@ -5,6 +5,11 @@ export interface Incident {
     latitude: string;
     longitude: string;
     message: string;
-    controllerId: number
+    controllerId: number;
+    controllerName: string
+
 }
 
+export function getControllerName(id:number) {
+    return 'bob'
+}

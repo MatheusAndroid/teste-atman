@@ -1,25 +1,34 @@
-<div>
-    <div>
-        <span>Controladores</span>
-        <span>Ver Tudo</span>
+<div id="controllers">
+    <div class="pre-list-card">
+        <span><strong>Controladores</strong></span>
+        <span class="see-all">Ver Tudo</span>
     </div>
-   
-        <div *ngFor="let controller of controllers">
+    <div class="list-card">
+        <div class="card" *ngFor="let controller of controllers">
             <div class="icon-vertical">
-                <i>icon</i>
+                <div class="icon-holder">
+                    <mat-icon>control_camera</mat-icon>
+                </div>
             </div>
-            <div>
-                <h3>{{ controller.name }}</h3>
-                <h4>{{ controller.id }}</h4>
-                <div>
-                    <div class="card-key">Lat.</div>
-                    <div class="card-value">{{ controller.latitude }}</div>
-                    <div class="card-key">Long.</div>
-                    <div class="card-value">{{ controller.longitude }}</div>
-                    <div class="card-key">Descrição</div>
-                    <div class="card-value">{{ controller.description }}</div>
+            <div class="card-infos">
+                <span><strong>{{ controller.name }}</strong></span>
+                <span>{{ controller.id }}</span>
+                <div class="card-block">
+                    <div >
+                        <div class="card-key">Lat.</div>
+                        <div class="card-value">{{ controller.latitude }}</div>
+                    </div>
+                    <div >
+                        <div class="card-key">Long.</div>
+                        <div class="card-value">{{ controller.longitude }}</div>
+                    </div>
+                    <div >
+                        <div class="card-key">Descrição</div>
+                        <div class="card-value">{{ controller.description }}</div>
+                    </div>
                 </div>
             </div>
 
         </div>
+    </div>
 </div>

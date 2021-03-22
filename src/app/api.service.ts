@@ -24,6 +24,9 @@ export class ApiService {
   getControllers(){
     return this.httpClient.get<Controller[]>(this.url + this.controllersUrl, this.httpOptions).pipe(map(res => {return JSON.parse(res.toString())}))
   }
+  getControllerById(id :number){
+    return this.httpClient.get<Controller[]>(this.url + this.controllersUrl + `/${id}`, this.httpOptions).pipe(map(res => {return JSON.parse(res.toString())}))
+  }
   getIncidents(){
     return this.httpClient.get<Incident[]>(this.url + this.incidentsUrl, this.httpOptions).pipe(map(res => {return JSON.parse(res.toString())}))
   }

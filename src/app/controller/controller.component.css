@@ -1,0 +1,9 @@
+.card{
+    border-color: var(--blue);
+}
+.icon-holder{
+    background-color: white;
+}
+.mat-icon{
+    color: var(--weak-black)
+}
