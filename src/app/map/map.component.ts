@@ -8,19 +8,18 @@ import { Incident } from '../models/incident';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
-  map!: google.maps.Map ;
-  @Input() incidents: Incident[];
+  map!: google.maps.Map;
+  @Input() incidents!: Incident[];
 
   constructor() {
-    this.incidents = []
-   }
-
+  }
+  countTo1 = 0
   ngOnInit(): void {
     const loader = new Loader({
       apiKey: "AIzaSyBHHPJJtxa35hhBS_e8oV6mMDHqUp0gsSo",
       language: "pt-BR"
     });
-    
+
     loader.load().then(() => {
       this.map = new google.maps.Map(document.getElementById("map") as HTMLElement, {
         center: { lat: -20.300, lng: -40.300 },
@@ -257,15 +256,19 @@ export class MapComponent implements OnInit {
         ]
       });
     }
-    ).then(() => {
-      this.loadMarkers()
-    })
+    )
   }
-  loadMarkers(): void{
+  ngOnChanges(): void {
+    if (this.countTo1) {
+      this.loadMarkers()
+    }
+    this.countTo1++
+  }
+  loadMarkers(): void {
     this.incidents.forEach((incident, i) => {
       console.log(incident.message)
       var marker = new google.maps.Marker({
-        position: {lat: parseInt(incident.latitude), lng: parseInt(incident.longitude)},
+        position: { lat: parseInt(incident.latitude), lng: parseInt(incident.longitude) },
         map: this.map,
         title: incident.message,
         visible: true,

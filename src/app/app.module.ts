@@ -8,16 +8,19 @@ import { IncidentComponent } from './incident/incident.component';
 import { MapComponent } from './map/map.component';
 import { MenuComponent } from './menu/menu.component';
 import {MatIconModule} from '@angular/material/icon';
+import { ChartComponent } from './chart/chart.component';
+import { ChartsModule } from "ng2-charts";
 @NgModule({
   declarations: [
     AppComponent,
     ControllerComponent,
     IncidentComponent,
     MapComponent,
-    MenuComponent
+    MenuComponent,
+    ChartComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, NoopAnimationsModule, MatIconModule
+    BrowserModule, HttpClientModule, NoopAnimationsModule, MatIconModule, ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent, ControllerComponent]
