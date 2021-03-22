@@ -7,3 +7,13 @@
 .mat-icon{
     color: var(--weak-black)
 }
+#map{
+    width: 100vw;
+    height: 100vh;
+}
+#controllers{
+    position: fixed;
+    bottom: 0px;
+    left: 10px;
+    z-index: 100;
+}

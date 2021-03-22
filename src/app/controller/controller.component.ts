@@ -21,6 +21,7 @@ export class ControllerComponent implements OnInit {
 
   ngOnInit(): void {
     this.getControllers()
+    
   }
   getControllers(){
     this.apiService.getControllers().subscribe((data : Controller[]) => {
