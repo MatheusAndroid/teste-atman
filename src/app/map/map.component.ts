@@ -267,7 +267,10 @@ export class MapComponent implements OnInit {
       var marker = new google.maps.Marker({
         position: {lat: parseInt(incident.latitude), lng: parseInt(incident.longitude)},
         map: this.map,
-        title: incident.message
+        title: incident.message,
+        visible: true,
+        label: incident.category,
+        zIndex: 1000
       });
       var infoWindow = new google.maps.InfoWindow({
         content: marker.getTitle()
