@@ -1,6 +1,6 @@
 # Sobre
 
-Este projeto teve o intuito de ser um teste front-end usando o angular pra gerar um mapa, com informações recebidas de uma api
+Este projeto teve o intuito de ser um teste front-end usando o angular pra gerar um mapa, com informações recebidas de uma api. Foi feito em uma aproximadamente uma semana, finalizado em março de/2021.
 
 # Map
 
